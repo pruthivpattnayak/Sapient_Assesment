@@ -8,16 +8,16 @@ function SideBar({
   selectedYear,
   handleS_LunchClick,
   handleS_LandingClick,
-  sLunch,
-  sLanding,
+  s_Lunch,
+  s_Landing,
 }) {
   const yearData = constants.YEAR_LUNCH;
 
   const successfulNodeStyles = (selector, data) => {
-    if (selector === "sLunch") {
-      return applyStyles(data, sLunch);
+    if (selector === "s_Lunch") {
+      return applyStyles(data, s_Lunch);
     } else {
-      return applyStyles(data, sLanding);
+      return applyStyles(data, s_Landing);
     }
   };
   const successfulNode = (data) => {
@@ -43,14 +43,14 @@ function SideBar({
   };
 
   const handleClick = (e, data) => {
-    if (data === "sLunch") {
-      if (e.target.innerText === sLunch) {
+    if (data === "s_Lunch") {
+      if (e.target.innerText === s_Lunch) {
         handleS_LunchClick("");
       } else {
         handleS_LunchClick(e.target.innerText);
       }
     } else {
-      if (e.target.innerText === sLanding) {
+      if (e.target.innerText === s_Landing) {
         handleS_LandingClick("");
       } else {
         handleS_LandingClick(e.target.innerText);
@@ -102,13 +102,13 @@ function SideBar({
     <div className="filter_container">
       <div className="sub_headers">Filters</div>
       <div className="filter_inner_container">
-        <div className="label">Lunch Year</div>
+        <div className="label">Launch Year</div>
         <hr />
         <div>{yearNode}</div>
-        <div className="label">Successful Lunch</div>
-        {successfulNode("sLunch")}
+        <div className="label">Successful Launch</div>
+        {successfulNode("s_Lunch")}
         <div className="label">Successful Landing</div>
-        {successfulNode("sLanding")}
+        {successfulNode("s_Landing")}
       </div>
     </div>
   );

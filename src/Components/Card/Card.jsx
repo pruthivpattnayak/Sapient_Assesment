@@ -23,11 +23,11 @@ function Card({ data }) {
         <li className="value">{"NA"}</li>
       )}
       <div>
-        <span className="sub_headers">Lunch Year:</span>
+        <span className="sub_headers">Launch Year:</span>
         <span className="value">{` ${data.launch_year}`}</span>
       </div>
       <div>
-        <span className="sub_headers">Successful Lunch:</span>
+        <span className="sub_headers">Successful Launch:</span>
         <span className="value">{data.launch_success ?` ${data.launch_success}` :" false"}</span>
       </div>
       <div>
